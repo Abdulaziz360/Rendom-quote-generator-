@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Welcome to Random Quote Generator</title>
+    <style>
+        body {
+            background-color: #6c6cff;
+        }
+
+        /* Add the background color to the custom class */
+        .menu-header {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar-brand,.navbar-brand h1 {
+            font-weight: bold;
+            color: rgb(255, 255, 255)!important;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #4c4cff !important;
+        }
+
+        .jumbotron {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .jumbotron h1 {
+            font-size: 2.5rem;
+        }
+
+        .jumbotron p {
+            font-size: 1.25rem;
+        }
+
+        .btn-primary {
+            background-color: #4c4cff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #3c3cff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="menu-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light-">
+            <div class="container">
+                <a class="navbar-brand" href="/home">Random Quote Generator</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        
+                        <%if(user && user.fname){%>
+                        <li class="nav-item">
+                            <a class="nav-link"><%=user.fname%> <%=user.lname%></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <%}else{%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Random Quote Generator</h1>
+            <p class="lead">Get inspired with random quotes from famous authors.</p>
+            <hr class="my-4">
+            <p>Explore our collection of thought-provoking quotes and share them with your friends!</p>
+            <a class="btn btn-primary btn-lg" href="/register" role="button">Register</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

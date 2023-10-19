@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <title>Login-Random Quote Generator</title>
+    <style>
+        body {
+           background-color: #6c6cff;
+       }
+       .container {
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+       span{
+        padding: 20px;
+       }
+       .center-btn {
+           display: flex;
+           justify-content: center;
+          
+       }
+       .btn {
+           padding:0px 10px;
+           background-color: #2613d6;
+       }
+   </style>
+</head>
+<body style="background-color: #6c6cff;">
+
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 style="text-align: center;"  class="display-4">Login</h1>
+            <form action=""method='post'>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                    <span><%=message%></span>
+                </div>
+                <div class="center-btn">
+                    <span>Don't have account?
+                     <a href="/register">Register</a></span>
+                   
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
